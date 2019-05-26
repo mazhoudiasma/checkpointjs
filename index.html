@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   
+        <input type="button" value="bold" onclick="bold()"/> 
+        <input type="button" value="italic" onclick="italic()"/> 
+        <input type="button" value="underline" onclick="underline()"> 
+
+
+        <select  id="police" onchange="police()">
+                <option value='Arial'>Arial</option>      
+                <option value='Times New Roman'>Times New Roman</option>      
+                <option value='Georgia'>Georgia</option>      
+                <option value='Lucida Console'>Lucida Console</option>      
+
+            </select>
+              
+                    
+                      <select id="size" onchange="Size()">
+                        <option value='12px'>12</option>      
+                        <option value='15px'>15</option>      
+                        <option value='18px'>18</option>      
+                        <option value='21px'>21</option>      
+                        <option value='25px'>25</option>      
+
+                    </select>
+    <br>
+
+    <textarea id="texte" rows="5" cols="33">
+    </textarea>
+
+        <!-- <script src="./main.js"/> -->
+        <script>
+                
+ console.log('valide')
+
+ 
+ 
+function italic()
+  {
+    document.getElementById('texte').style.fontStyle='italic';
+  }
+   
+function bold()
+  {
+  document.getElementById('texte').style.fontWeight='bold';
+  }
+   
+  function underline()
+   {
+   document.getElementById('texte').style.textDecoration='underline';
+   }
+  function police()
+  {
+      console.log(document.getElementById('police').value)
+    document.getElementById('texte').style.fontFamily=document.getElementById('police').value;
+  }
+  function Size()
+  {
+      console.log(document.getElementById('size').value)
+    document.getElementById('texte').style.fontSize =document.getElementById('size').value;
+  }
+
+
+        
+        </script>
+
+</body>
+</html>
